@@ -35,4 +35,12 @@ setup(
         "tqdm>=4.67",
         "websockets>=14.0",
     ],
+    extras_require={
+        "gcs-pip": ["google-cloud-storage"],
+    },
+    entry_points={
+        "console_scripts": [
+            "gcs-pip = google.cloud.dataproc_pip.main:main",
+        ],
+    },
 )
